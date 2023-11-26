@@ -1,0 +1,37 @@
+{
+  "name": "weasel-lang",
+  "displayName": "Weasel Lang",
+  "description": "Syntax highlight for Weasel Language",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "npx js-yaml syntaxes/weasel.tmLanguage.yaml > syntaxes/weasel.tmLanguage.json"
+  },
+  "engines": {
+    "vscode": "^1.84.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "weasel",
+        "aliases": [
+          "Weasel",
+          "weasel"
+        ],
+        "extensions": [
+          ".we"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "weasel",
+        "scopeName": "source.we",
+        "path": "./syntaxes/weasel.tmLanguage.json"
+      }
+    ]
+  }
+}
